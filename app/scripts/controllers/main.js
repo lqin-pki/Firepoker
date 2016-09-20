@@ -1,4 +1,5 @@
 'use strict';
+/*global $ */
 
 /**
  * MainCtrl
@@ -124,12 +125,12 @@ angular.module('firePokerApp')
           for (var i = 0; i < issues.length; i++) {
             var story = {};
             story.title = $(issues[i]).find('title').html();
-            story.notes = $("<textarea/>").html($(issues[i]).find('description').html()).text();
+            story.notes = $('<textarea/>').html($(issues[i]).find('description').html()).text();
             story.status = 'queue';
             stories.push(story);
           }
         } catch (error) {
-          alert(error);
+          window.alert(error);
         }
       }
       /*

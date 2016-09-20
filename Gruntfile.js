@@ -287,7 +287,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    //'jshint',
+    'jshint',
     'coffee',
     //'compass:dist',
     'useminPrepare',
