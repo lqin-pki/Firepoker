@@ -78,7 +78,7 @@
                   <a href="" ng-click="deleteStory($index)"><span class="glyphicon glyphicon-trash"></span></a>
                 </div>
                 <a href="" ng-click="setStory($index)">{{story.title}}</a>
-                <p>{{story.notes}}</p>
+                <p ng-bind-html-unsafe="story.notes"></p>
                 <hr ng-show="unestimatedStoriesCount > 1 && !$last">
               </li>
             </ul>

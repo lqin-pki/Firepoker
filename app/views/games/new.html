@@ -18,8 +18,8 @@
         <input ng-model="newGame.description" type="text" class="form-control" id="description" placeholder="Enter game description">
       </div>
       <div class="form-group">
-        <label for="stories">Import stories (optional, one per line)</label>
-        <textarea ng-model="newGame.stories" rows="10" class="form-control" id="stories" placeholder="Enter stories"></textarea>
+        <label for="stories">Import stories from XML exported from JIRA  (optional)</label>
+        <textarea ng-model="newGame.importingXML" rows="10" class="form-control" id="stories" placeholder="Copy and paste the exported XML content here."></textarea>
         <p class="help-block">Copy and paste to import stories into your game.</p>
       </div>
       <div class="form-group">

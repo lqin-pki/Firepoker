@@ -9,6 +9,7 @@
  *
  * @author Everton Yoshitani <everton@wizehive.com>
  */
+
 angular.module('firePokerApp')
   .controller('MainCtrl', function ($rootScope, $scope, $cookieStore, $location, $routeParams, $timeout, angularFire) {
 
@@ -115,6 +116,23 @@ angular.module('firePokerApp')
     $scope.createGame = function() {
       var stories = [],
           newGame = angular.copy($scope.newGame);
+      if (newGame.importingXML) {
+        try {
+          var storiesDoc = $.parseXML(newGame.importingXML);
+          var xml = $(storiesDoc);
+          var issues = xml.find('item');
+          for (var i = 0; i < issues.length; i++) {
+            var story = {};
+            story.title = $(issues[i]).find('title').html();
+            story.notes = $("<textarea/>").html($(issues[i]).find('description').html()).text();
+            story.status = 'queue';
+            stories.push(story);
+          }
+        } catch (error) {
+          alert(error);
+        }
+      }
+      /*
       if (newGame.stories) {
         angular.forEach(newGame.stories.split('\n'), function(title) {
           var story = {
@@ -124,6 +142,7 @@ angular.module('firePokerApp')
           stories.push(story);
         });
       }
+      */
       newGame.stories = stories;
       newGame.status = 'active';
       newGame.created = new Date().getTime();
