@@ -60,6 +60,16 @@ body {
   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAANklEQVQYV2NkIAIwEqHmPyFF/4GGMBJSBLYIlyKwCTCnYFOEogCfSSj+QTYJwwR063AqACkEAGnjBgmbf5VOAAAAAElFTkSuQmCC) repeat;
 }
 
+.list-inline li {
+  margin: 5px;
+}
+
+.list-inline a {
+  font-size: 18px;
+}
+
+
+
 .list-item {
   width: 105px;
 }
