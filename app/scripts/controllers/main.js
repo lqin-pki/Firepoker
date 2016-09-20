@@ -265,7 +265,7 @@ angular.module('firePokerApp')
 
     // Card deck options
     $scope.decks = [
-      [0, 1, 2, 3, 5, 8, 13, 20, 40, 100, '?'],
+      [0, 1, 2, 3, 5, 8, 13, 20, 40, 100, '?']
     ];
 
     // Set Defaults
