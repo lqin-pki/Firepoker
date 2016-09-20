@@ -53,7 +53,7 @@ autoWatch = false;
 if (process.env.TRAVIS) {
   browsers = ['Firefox'];
 } else {
-  browsers = ['Chrome'];
+  browsers = ['PhantomJS'];
 }
 
 // If browser does not capture in given timeout [ms], kill it
