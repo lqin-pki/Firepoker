@@ -129,6 +129,7 @@ angular.module('firePokerApp')
             story.status = 'queue';
             stories.push(story);
           }
+          newGame.importingXML = null;
         } catch (error) {
           window.alert(error);
         }
