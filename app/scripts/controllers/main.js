@@ -212,10 +212,15 @@ angular.module('firePokerApp')
 
     // Estimate story
     $scope.estimate = function(points) {
-      if (!$scope.game.estimate.results) {
-        $scope.game.estimate.results = [];
-      }
-      $scope.game.estimate.results.push({points:points, user:$scope.fp.user});
+      var gameRef = ref.child('/games/' + $routeParams.gid);
+      gameRef.transaction(function (game) {
+        if (!game.estimate.results) {
+          game.estimate.results = [];
+        }
+        game.estimate.results.push({points:points, user:$scope.fp.user});
+
+        return game;
+      });
     };
 
     // Set full name
