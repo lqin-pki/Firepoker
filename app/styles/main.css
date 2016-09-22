@@ -89,6 +89,10 @@ body {
   margin-top:2em;
 }
 
+.vspace h5 {
+  font-weight: bold;
+}
+
 span[contenteditable=true] {
    background: rgba(0,0,0,0); /* transparent bg */
    resize:none; /* disable resizing */

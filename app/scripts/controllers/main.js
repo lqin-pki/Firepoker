@@ -134,17 +134,7 @@ angular.module('firePokerApp')
           window.alert(error);
         }
       }
-      /*
-      if (newGame.stories) {
-        angular.forEach(newGame.stories.split('\n'), function(title) {
-          var story = {
-            title: title,
-            status: 'queue'
-          };
-          stories.push(story);
-        });
-      }
-      */
+
       newGame.stories = stories;
       newGame.status = 'active';
       newGame.created = new Date().getTime();

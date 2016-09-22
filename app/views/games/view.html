@@ -129,23 +129,9 @@
   </div>
   <div class="col-md-4">
     <div class="affix">
-      <!--
-      <div class="btn-group pull-right">
-        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-          <span class="glyphicon glyphicon-cog"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#" ng-click="logout()">Logout</a></li>
-        </ul>
-      </div>
-      -->
       <div>
         <h4>{{game.name}}</h4>
-        <p>{{game.description}}</p>
+        <p ng-bind-html-unsafe="game.description"></p>
       </div>
       <div class="vspace">
         <h5>Participants ({{totalOfOnlineParticipants()}})</h5>
