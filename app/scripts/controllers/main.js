@@ -59,7 +59,12 @@ angular.module('firePokerApp')
     // Redirect with a GID to create new games
     $scope.redirectToCreateNewGame = function() {
       if ($location.path() === '/games/new' || $location.path() === '/games/new/') {
-        $scope.fp.gid = guid();
+        var searchObject = $location.search();
+        if (searchObject && searchObject.gid) {
+          $scope.fp.gid = searchObject.gid;
+        } else {
+          $scope.fp.gid = guid();
+        }
         $location.path('/games/new/' + $scope.fp.gid);
         $location.replace();
       }
