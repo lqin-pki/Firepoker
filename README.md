@@ -1,3 +1,5 @@
+This is a fork.
+
 Firepoker [![Build Status](https://travis-ci.org/Wizehive/Firepoker.png?branch=master)](https://travis-ci.org/Wizehive/Firepoker) [![Code Climate](https://codeclimate.com/github/Wizehive/Firepoker/badges/gpa.svg)](https://codeclimate.com/github/Wizehive/Firepoker)
 =========
 
